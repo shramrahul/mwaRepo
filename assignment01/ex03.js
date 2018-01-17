@@ -1,7 +1,9 @@
 function isWeekend() {
 	const todayDate = new Date();
   	const day = todayDate.getDay();
-  	return day === 6 || day === 0 ? 'weekend': 'weekday';
+
+  	let daysArr = ['weekend', 'weekday', 'weekday', 'weekday', 'weekday', 'weekday', 'weekend']
+    return daysArr[day];
 }
 
 console.log(isWeekend());
