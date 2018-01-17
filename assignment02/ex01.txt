@@ -6,7 +6,8 @@ means execute after all current functions in the present queue get executed. No 
 setImmediate is similar in this regard except that it doesn't use queue of functions. It checks queue of I/O eventhandlers. 
 If all I/O events in the current snapshot are processed, it executes the callback. It queues them immedieately after the last I/O handler 
 somewhat like process.nextTick. So it is faster.
-setTimeout is un-intrusive way of calling functions after some time just like in the browser and will be slow as it will check the timer at least once before executing. In this case its better to use setImmediate instead of using setTimeout.
+setTimeout is un-intrusive way of calling functions after some time just like in the browser and will be slow as it will check the timer 
+at least once before executing. In this case its better to use setImmediate instead of using setTimeout.
 
 2. Explain the difference between process.nextTick and setImmediate?
 Answer.
