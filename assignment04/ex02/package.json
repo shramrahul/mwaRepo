@@ -1,0 +1,14 @@
+{
+  "name": "ex02",
+  "version": "1.0.0",
+  "description": "checkSystem",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "neeman.drn@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^5.5.6"
+  }
+}
