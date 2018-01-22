@@ -52,7 +52,7 @@ router.put('/', checkOp, function(req, res, next) {
   			if(q == null) {
   				return res.status(422).json({ errors: "id is not present to modify"});
   			}
-  			
+
 	  		gradesMgr.modify(gd);
 	  		res.status(200).json({"message": "done"});
 	  	}
@@ -60,8 +60,10 @@ router.put('/', checkOp, function(req, res, next) {
 
 router.delete('/:id', function(req, res, next) {
 	let id = req.params.id;
-	if(id == null) {
-		return res.status(422).json({ errors: "no id found"});
+	let q = gradesMgr.getGradesById(id);
+	
+	if(q == null) {
+		return res.status(422).json({ errors: "id is not present to delete"});
 	}
 
 	gradesMgr.remove(id);
